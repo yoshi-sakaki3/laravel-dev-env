@@ -1,0 +1,10 @@
+# 静的解析（Larastan）。動かさずに、型の食い違いや呼び出しミスを見つける
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+        - routes
+        - database
+    level: 6

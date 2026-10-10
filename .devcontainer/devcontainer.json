@@ -1,0 +1,26 @@
+{
+  // VS Code の「コンテナーで再度開く」で、PHP コンテナの中を直接編集・実行できる。
+  // コンテナの中では vendor も見えるので、補完や定義へのジャンプが効く。
+  // 中で編集した内容は、2 秒ほどで Windows 側の src フォルダにも反映される（sync サービス）。
+  "name": "GLDX Laravel",
+  "dockerComposeFile": ["../compose.yaml"],
+  "service": "php",
+  "workspaceFolder": "/var/www/html",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+        "open-southeners.laravel-pint",
+        "SanderRonde.phpstan-vscode",
+        "onecentlin.laravel-blade",
+        "bradlc.vscode-tailwindcss",
+        "EditorConfig.EditorConfig"
+      ],
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php"
+      }
+    }
+  }
+}

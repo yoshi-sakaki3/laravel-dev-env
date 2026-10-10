@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // .\dev.ps1 xdebug on のあと、F5 でステップ実行を待ち受ける
+      "name": "Xdebug を待ち受ける（Docker）",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "pathMappings": {
+        "/var/www/html": "${workspaceFolder}/src"
+      }
+    }
+  ]
+}
